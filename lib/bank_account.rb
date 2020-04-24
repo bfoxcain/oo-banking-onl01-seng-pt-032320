@@ -2,7 +2,7 @@ class BankAccount
     attr_accessor :balance, :status
     attr_reader :name
   
-    def initiallize(name)
+    def initialize(name)
         @name = name
         @balance = 1000
         @status = "open"
@@ -13,7 +13,7 @@ class BankAccount
     end
 
     def display_balance
-        "Your balance is $#{@balance}."
+        "Your balance is $#{self.balance}."
     end
 
     def valid?
